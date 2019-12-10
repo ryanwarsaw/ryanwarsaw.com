@@ -4,22 +4,19 @@ description: >-
   Ryan Warsaw is a Software Engineer with a passion for full stack product 
   development and open source practices. His work is primarily oriented around
   the education space.
-baseurl: "" 
-url: "https://ryanwarsaw.com" 
-twitter_username: ryanwarsaw
-github_username:  ryanwarsaw
+show_excerpts: true
 
 # Build settings
 markdown: kramdown
 theme: plainwhite
-plugins:
-  - jekyll-feed
 
 plainwhite:
   name: Ryan Warsaw
   tagline: Software Engineer
   date_format: "%b %-d, %Y"
+  sitemap: true
   social_links:
     twitter: ryanwarsaw
     github: ryanwarsaw
     linkedIn: in/ryanwarsaw
+  analytics_id: UA-111542477-3
