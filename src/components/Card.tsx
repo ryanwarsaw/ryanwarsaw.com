@@ -1,11 +1,11 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import Image from "next/image";
 import { Job } from "../misc/types";
 
 type Props = { job: Job };
 
-const Card = ({ job }: Props) => (
-  <div className="bg-white max-w-4xl dark:bg-slate-800 overflow-hidden rounded-md shadow-md p-4 my-6">
+const Card = ({ job }: Props): JSX.Element => (
+  <div className="bg-white max-w-4xl dark:bg-slate-800 overflow-hidden rounded-md shadow-md p-4 mt-6">
     <div className="flex justify-between">
       <div>
         <div className="font-bold text-xl dark:text-white">{job.title}</div>
@@ -13,15 +13,17 @@ const Card = ({ job }: Props) => (
           {[job.company, job.duration, job.location].join("\t•\t")}
         </div>
       </div>
-      <Image
-        alt={`${job.company} logo`}
-        src={job.logo}
-        layout="raw"
-        height={48}
-        width={48}
-        unoptimized={true}
-        className="rounded-md"
-      />
+      <div>
+        <Image
+          alt={`${job.company} logo`}
+          src={job.logo}
+          layout="raw"
+          height={48}
+          width={48}
+          unoptimized={true}
+          className="rounded-md"
+        />
+      </div>
     </div>
     <p className="text-gray-700 dark:text-gray-300 line-clamp-3 my-2">
       {job.description}

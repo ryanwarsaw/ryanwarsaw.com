@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import { useEffect } from "react";
+import { Fragment, useEffect } from "react";
 import Card from "../components/Card";
 import FabButton from "../components/FabButton";
 import resume from "../misc/resume";
@@ -34,8 +34,8 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="bg-neutral-50 dark:bg-slate-900 grid grid-cols-8">
-        <div className="col-start-2 col-end-4 mt-4 pt-24 flex flex-col items-center">
+      <main className="bg-neutral-50 dark:bg-slate-900 lg:grid lg:grid-cols-8">
+        <div className="lg:col-start-2 lg:col-end-4 pt-24 flex flex-col items-center">
           <div className="flex flex-col">
             <Image
               src="/profile.jpeg"
@@ -79,9 +79,9 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className="col-start-4 col-end-8">
+        <div className="lg:col-start-4 lg:col-end-8">
           <div>
-            <div className="h-screen overflow-scroll scrollbar-hide flex-1 flex-col pt-20">
+            <div className="lg:h-screen lg:overflow-scroll lg:scrollbar-hide flex-1 flex-col pt-20">
               {resume?.length && resume.map((job) => <Card job={job} />)}
             </div>
           </div>
