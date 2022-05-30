@@ -34,9 +34,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="bg-white dark:bg-slate-900 grid grid-cols-6">
-        <div className="col-start-2 col-end-3 flex flex-col">
-          <div className="m-10 flex flex-col">
+      <main className="bg-white dark:bg-slate-900 grid grid-cols-8">
+        <div className="col-start-2 col-end-4 mt-4 pt-24 flex flex-col items-center">
+          <div className="flex flex-col">
             <Image
               src="/profile.jpeg"
               alt="Profile Picture"
@@ -44,35 +44,40 @@ const Home: NextPage = () => {
               unoptimized={true}
               width={200}
               height={200}
+              className="rounded-md"
             />
-            <div className="text-2xl pt-4 dark:text-white">Ryan Warsaw</div>
-            <span className="text-gray-400 text-sm">Software Engineer</span>
-            <span className="text-gray-400 text-sm">Bentonville, Arkansas</span>
-            <div className="flex flex-col pt-10">
+            <div className="text-3xl pt-4 dark:text-white">Ryan Warsaw</div>
+            <span className="text-gray-400 text-md">Software Engineer</span>
+            <span className="text-gray-400 text-md">Bentonville, Arkansas</span>
+            <div className="flex flex-row items-center">
               <a
                 href="https://github.com/ryanwarsaw"
-                className="p-2 text-sm text-indigo-400 border-b"
+                className="inline text-md text-indigo-400"
               >
-                GitHub Portfolio
+                GitHub
               </a>
+              <span className="p-1 text-gray-400">{"•"}</span>
               <a
                 href="https://www.linkedin.com/in/ryanwarsaw/"
-                className="p-2 text-sm text-indigo-400 border-b"
+                className="inline text-md text-indigo-400"
               >
-                LinkedIn Profile
+                LinkedIn
               </a>
+              <span className="p-1 text-gray-400">{"•"}</span>
               <a
                 href="mailto:me@ryanwarsaw.com"
-                className="p-2 border-b text-sm text-indigo-400"
+                className="inline text-md text-indigo-400"
               >
-                Contact Me
+                Email
               </a>
             </div>
           </div>
         </div>
-        <div className="col-start-3 col-end-7">
-          <div className="h-screen overflow-scroll flex-1 flex-col">
-            {resume?.length && resume.map((job) => <Card job={job} />)}
+        <div className="col-start-4 col-end-8">
+          <div>
+            <div className="h-screen overflow-scroll scrollbar-hide flex-1 flex-col pt-20">
+              {resume?.length && resume.map((job) => <Card job={job} />)}
+            </div>
           </div>
         </div>
         <FabButton />
