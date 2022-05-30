@@ -49,26 +49,30 @@ const Home: NextPage = () => {
             <div className="text-3xl pt-4 font-bold dark:text-white">
               Ryan Warsaw
             </div>
-            <span className="text-gray-500 text-md">Software Engineer</span>
-            <span className="text-gray-500 text-md">Bentonville, Arkansas</span>
+            <span className="text-gray-500 dark:text-gray-400 text-md">
+              Software Engineer
+            </span>
+            <span className="text-gray-500 dark:text-gray-400 text-md">
+              Bentonville, Arkansas
+            </span>
             <div className="flex flex-row items-center">
               <a
                 href="https://github.com/ryanwarsaw"
-                className="inline text-md text-indigo-400"
+                className="inline text-md text-indigo-600 dark:text-indigo-400"
               >
                 GitHub
               </a>
               <span className="p-1 text-gray-400">{"•"}</span>
               <a
                 href="https://www.linkedin.com/in/ryanwarsaw/"
-                className="inline text-md text-indigo-400"
+                className="inline text-md text-indigo-600 dark:text-indigo-400"
               >
                 LinkedIn
               </a>
               <span className="p-1 text-gray-400">{"•"}</span>
               <a
                 href="mailto:me@ryanwarsaw.com"
-                className="inline text-md text-indigo-400"
+                className="inline text-md text-indigo-600 dark:text-indigo-400"
               >
                 Email
               </a>

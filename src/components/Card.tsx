@@ -9,7 +9,7 @@ const Card = ({ job }: Props) => (
     <div className="flex justify-between">
       <div>
         <div className="font-bold text-xl dark:text-white">{job.title}</div>
-        <div className="text-gray-400 text-sm">
+        <div className="text-gray-500 dark:text-gray-400 text-sm">
           {[job.company, job.duration, job.location].join("\t•\t")}
         </div>
       </div>

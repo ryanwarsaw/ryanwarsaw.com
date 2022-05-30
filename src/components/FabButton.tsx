@@ -18,6 +18,7 @@ const FabButton = () => {
   return (
     <button
       onClick={toggleTheme}
+      aria-label="Toggle Color Scheme"
       className="absolute bottom-12 right-12 bg-indigo-400 dark:bg-indigo-700 h-16 w-16 rounded-full flex items-center justify-center"
     >
       <svg
