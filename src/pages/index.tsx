@@ -34,7 +34,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="bg-white dark:bg-slate-900 grid grid-cols-8">
+      <main className="bg-neutral-50 dark:bg-slate-900 grid grid-cols-8">
         <div className="col-start-2 col-end-4 mt-4 pt-24 flex flex-col items-center">
           <div className="flex flex-col">
             <Image
@@ -44,11 +44,13 @@ const Home: NextPage = () => {
               unoptimized={true}
               width={200}
               height={200}
-              className="rounded-md"
+              className="rounded-full"
             />
-            <div className="text-3xl pt-4 dark:text-white">Ryan Warsaw</div>
-            <span className="text-gray-400 text-md">Software Engineer</span>
-            <span className="text-gray-400 text-md">Bentonville, Arkansas</span>
+            <div className="text-3xl pt-4 font-bold dark:text-white">
+              Ryan Warsaw
+            </div>
+            <span className="text-gray-500 text-md">Software Engineer</span>
+            <span className="text-gray-500 text-md">Bentonville, Arkansas</span>
             <div className="flex flex-row items-center">
               <a
                 href="https://github.com/ryanwarsaw"
