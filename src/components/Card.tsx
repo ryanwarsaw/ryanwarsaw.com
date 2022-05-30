@@ -30,8 +30,8 @@ const Card = ({ job }: Props): JSX.Element => (
     </p>
 
     <div className="pt-1 truncate">
-      {job.tags?.map((tag) => (
-        <span className="inline-block bg-indigo-600 dark:bg-indigo-700 rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 mb-2">
+      {job.tags?.map((tag, index) => (
+        <span key={index} className="inline-block bg-indigo-600 dark:bg-indigo-700 rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 mb-2">
           {tag}
         </span>
       ))}

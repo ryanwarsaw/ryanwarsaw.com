@@ -82,7 +82,7 @@ const Home: NextPage = () => {
         <div className="lg:col-start-4 lg:col-end-8">
           <div>
             <div className="lg:h-screen lg:overflow-scroll lg:scrollbar-hide flex-1 flex-col pt-20">
-              {resume?.length && resume.map((job) => <Card job={job} />)}
+              {resume?.length && resume.map((job, index) => <Card key={index} job={job} />)}
             </div>
           </div>
         </div>
