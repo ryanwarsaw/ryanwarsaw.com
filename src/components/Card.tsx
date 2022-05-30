@@ -5,7 +5,7 @@ import { Job } from "../misc/types";
 type Props = { job: Job };
 
 const Card = ({ job }: Props) => (
-  <div className="max-w-3xl bg-white dark:bg-slate-800 overflow-hidden rounded-md shadow-lg p-4 my-6">
+  <div className="bg-white max-w-3xl dark:bg-slate-800 overflow-hidden rounded-md shadow-lg p-4 my-6">
     <div className="flex justify-between">
       <div>
         <div className="font-bold text-xl dark:text-white">{job.title}</div>

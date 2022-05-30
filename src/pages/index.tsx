@@ -70,11 +70,9 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className="col-start-3 col-end-6">
-          <div className="flex flex-col items-center">
-            <div className="">
-              {resume?.length && resume.map((job) => <Card job={job} />)}
-            </div>
+        <div className="col-start-3 col-end-7">
+          <div className="h-screen overflow-scroll flex-1 flex-col">
+            {resume?.length && resume.map((job) => <Card job={job} />)}
           </div>
         </div>
         <FabButton />
