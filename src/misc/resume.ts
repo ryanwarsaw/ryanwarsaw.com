@@ -3,8 +3,22 @@ import { Job } from "./types";
 const resume: Job[] = [
   {
     title: "Software Engineer",
+    company: "Autodesk",
+    duration: "Oct 2022 - Present",
+    location: "Remote",
+    description: "Supporting the reports team in Autodesk's Construction Cloud division",
+    logo: "/logos/autodesk.png",
+    tags: [
+      "TypeScript",
+      "JavaScript",
+      "PostgreSQL",
+      "Docker"
+    ]
+  },
+  {
+    title: "Lead Software Engineer",
     company: "Edify, Inc",
-    duration: "Oct 2021 - Present",
+    duration: "Oct 2021 - Oct 2022",
     location: "Remote",
     description:
       "Responsible for the development and maintenance of our technical stack. Working closely with product to develop a roadmap and deliver customer value in a timely fashion.",
