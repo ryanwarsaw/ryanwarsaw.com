@@ -2,12 +2,59 @@ import { Job } from "./types";
 
 const resume: Job[] = [
   {
-    title: "Software Engineer",
+    title: "Tech Lead, Forma Mobile Backend",
     company: "Autodesk",
-    duration: "Oct 2022 - Present",
+    duration: "July 2026 - Present",
     location: "Remote",
     description:
-      "Supporting the reports team in Autodesk's Construction Cloud division",
+      "Lead technical development of the backend services powering Autodesk's Forma Mobile application.",
+    logo: "/logos/autodesk.png",
+    tags: [
+      "Technical Leadership",
+      "System Architecture",
+      "Mobile",
+      "Multi-Region Deployment",
+      "FedRAMP",
+    ],
+  },
+  {
+    title: "Tech Lead, Forma Reports",
+    company: "Autodesk",
+    duration: "April 2025 - July 2026",
+    location: "Remote",
+    description:
+      "Led a team of eight engineers and owned technical direction for Forma Reports. Coordinated improvements across teams to deliver higher-quality report imagery, including upgrades to image processing and migration of existing photos. Resolved complex PDF generation, scaling, and analytical database performance issues. Worked with the architecture council to address reliability, data access, and service capacity constraints. Led regionalization work for a program targeting five simultaneous regional deployments and contributed to engineering work toward FedRAMP compliance.",
+    logo: "/logos/autodesk.png",
+    tags: [
+      "Technical Leadership",
+      "System Architecture",
+      "Performance",
+      "Multi-Region Deployment",
+      "FedRAMP",
+    ],
+  },
+  {
+    title: "Senior Software Engineer, Reports",
+    company: "Autodesk",
+    duration: "April 2024 - April 2025",
+    location: "Remote",
+    description:
+      "Scaled reporting services to meet growing demand, took on DevOps responsibilities, and delivered product features end to end. Led work to make services deployable across regions, supporting Forma Construction's expansion to an Australian data center. Established coding guidance and built automated checks to catch region-specific assumptions, making future regional deployments easier.",
+    logo: "/logos/autodesk.png",
+    tags: [
+      "DevOps",
+      "Scalability",
+      "Multi-Region Deployment",
+      "Developer Tooling",
+    ],
+  },
+  {
+    title: "Software Engineer, Reports",
+    company: "Autodesk",
+    duration: "Oct 2022 - April 2024",
+    location: "Remote",
+    description:
+      "Led a year-long consolidation of two reporting services into a single platform with zero downtime and no user incidents. Designed the migration path and incrementally migrated data and features supporting Autodesk Construction Cloud (now Forma) and BIM360 Reports. Delivered a separate PostgreSQL database migration with zero downtime, alongside product features and usability improvements.",
     logo: "/logos/autodesk.png",
     tags: ["TypeScript", "JavaScript", "PostgreSQL", "Docker"],
   },

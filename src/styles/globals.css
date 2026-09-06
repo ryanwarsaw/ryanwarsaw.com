@@ -1,6 +1,48 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--text);
+  --color-muted: var(--muted);
+  --color-edge: var(--border);
+  --color-accent: var(--accent);
+  --color-tag: var(--tag);
+  --font-sans: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+}
+
+@layer base {
+  :root {
+    color-scheme: light dark;
+    --background: #f6f5f1;
+    --surface: #fdfdfb;
+    --text: #262c2b;
+    --muted: #686f6b;
+    --border: #e2e5de;
+    --accent: #276859;
+    --tag: #edf3ef;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #161b19;
+      --surface: #1d2421;
+      --text: #e7ece6;
+      --muted: #a2ada5;
+      --border: #333d36;
+      --accent: #9bd2ba;
+      --tag: #293b32;
+    }
+  }
+
+  body {
+    @apply m-0 bg-background font-sans leading-[1.65] text-foreground antialiased;
+  }
+
+  ::selection {
+    @apply bg-accent text-background;
+  }
+}
 
 @utility scrollbar-hide {
   -ms-overflow-style: none;

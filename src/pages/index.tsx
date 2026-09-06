@@ -1,41 +1,23 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import { useEffect } from "react";
 import Card from "../components/Card";
-import FabButton from "../components/FabButton";
 import resume from "../misc/resume";
 
 const Home: NextPage = () => {
-  // Sets the page theme on initial page load, if none is set
-  // defaults to the user's browser preferred color scheme.
-  useEffect(() => {
-    const theme: string | null = localStorage.getItem("theme");
-    if (theme) {
-      document.documentElement.classList.add(theme);
-    } else {
-      const prefersDark: boolean = window.matchMedia(
-        "(prefers-color-scheme: dark)"
-      ).matches;
-      const theme = prefersDark ? "dark" : "light";
-      localStorage.setItem("theme", theme);
-      document.documentElement.classList.add(theme);
-    }
-  }, []);
-
   return (
     <div>
       <Head>
         <title>Ryan Warsaw</title>
         <meta
           name="description"
-          content="Ryan Warsaw is a Software Engineer based out of Bentonville, Arkansas."
+          content="Ryan Warsaw is a Tech Lead at Autodesk, leading the Forma Mobile backend team, based in Bentonville, Arkansas."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="bg-neutral-50 dark:bg-slate-900 lg:grid lg:grid-cols-8">
-        <div className="lg:col-start-2 lg:col-end-4 pt-24 flex flex-col items-center">
+      <main className="min-h-svh lg:grid lg:grid-cols-8">
+        <div className="flex flex-col items-center px-6 pt-14 lg:col-start-2 lg:col-end-4 lg:pt-24">
           <div className="flex flex-col">
             <Image
               src="/profile.jpeg"
@@ -43,50 +25,34 @@ const Home: NextPage = () => {
               unoptimized={true}
               width={200}
               height={200}
-              className="rounded-full"
+              className="rounded-full border-5 border-surface outline outline-edge"
             />
-            <div className="text-3xl pt-4 font-bold dark:text-white">
+            <h1 className="mt-6 mb-[0.35rem] text-[2rem] leading-[1.2] font-semibold tracking-[-0.055em]">
               Ryan Warsaw
-            </div>
-            <span className="text-gray-500 dark:text-gray-400 text-md">
-              Software Engineer
+            </h1>
+            <span className="text-[0.9375rem] text-muted">
+              Tech Lead at Autodesk
             </span>
-            <span className="text-gray-500 dark:text-gray-400 text-md">
+            <span className="text-[0.9375rem] text-muted">
               Bentonville, Arkansas
             </span>
-            <div className="flex flex-row items-center">
-              <a
-                href="https://github.com/ryanwarsaw"
-                className="inline text-md text-indigo-600 dark:text-indigo-400"
-              >
-                GitHub
-              </a>
-              <span className="p-1 text-gray-400">{"•"}</span>
-              <a
-                href="https://www.linkedin.com/in/ryanwarsaw/"
-                className="inline text-md text-indigo-600 dark:text-indigo-400"
-              >
-                LinkedIn
-              </a>
-              <span className="p-1 text-gray-400">{"•"}</span>
-              <a
-                href="mailto:me@ryanwarsaw.com"
-                className="inline text-md text-indigo-600 dark:text-indigo-400"
-              >
-                Email
-              </a>
+            <div className="mt-[1.15rem] flex flex-row items-center gap-[0.65rem] text-sm leading-[inherit] font-medium [&_span]:text-edge [&_a]:text-accent [&_a]:underline [&_a]:decoration-transparent [&_a]:underline-offset-5 [&_a]:transition-[text-decoration-color] [&_a]:duration-150 [&_a]:ease-[ease] [&_a:hover]:decoration-current [&_a:focus-visible]:rounded-xs [&_a:focus-visible]:outline-2 [&_a:focus-visible]:outline-offset-5 [&_a:focus-visible]:outline-accent motion-reduce:[&_a]:transition-none">
+              <a href="https://github.com/ryanwarsaw">GitHub</a>
+              <span aria-hidden="true">/</span>
+              <a href="https://www.linkedin.com/in/ryanwarsaw/">LinkedIn</a>
+              <span aria-hidden="true">/</span>
+              <a href="mailto:me@ryanwarsaw.com">Email</a>
             </div>
           </div>
         </div>
         <div className="lg:col-start-4 lg:col-end-8">
           <div>
-            <div className="lg:h-screen lg:overflow-scroll lg:scrollbar-hide flex-1 flex-col pt-20">
+            <div className="mx-auto max-w-[44rem] px-5 pt-12 pb-8 lg:mx-0 lg:h-screen lg:max-w-none lg:overflow-y-auto lg:px-1 lg:pt-24 lg:pb-12 lg:scrollbar-hide">
               {resume?.length &&
                 resume.map((job, index) => <Card key={index} job={job} />)}
             </div>
           </div>
         </div>
-        <FabButton />
       </main>
     </div>
   );
