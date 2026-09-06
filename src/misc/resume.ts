@@ -6,14 +6,10 @@ const resume: Job[] = [
     company: "Autodesk",
     duration: "Oct 2022 - Present",
     location: "Remote",
-    description: "Supporting the reports team in Autodesk's Construction Cloud division",
+    description:
+      "Supporting the reports team in Autodesk's Construction Cloud division",
     logo: "/logos/autodesk.png",
-    tags: [
-      "TypeScript",
-      "JavaScript",
-      "PostgreSQL",
-      "Docker"
-    ]
+    tags: ["TypeScript", "JavaScript", "PostgreSQL", "Docker"],
   },
   {
     title: "Lead Software Engineer",

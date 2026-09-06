@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import { Fragment, useEffect } from "react";
+import { useEffect } from "react";
 import Card from "../components/Card";
 import FabButton from "../components/FabButton";
 import resume from "../misc/resume";
@@ -40,7 +40,6 @@ const Home: NextPage = () => {
             <Image
               src="/profile.jpeg"
               alt="Profile Picture"
-              layout="raw"
               unoptimized={true}
               width={200}
               height={200}
@@ -82,7 +81,8 @@ const Home: NextPage = () => {
         <div className="lg:col-start-4 lg:col-end-8">
           <div>
             <div className="lg:h-screen lg:overflow-scroll lg:scrollbar-hide flex-1 flex-col pt-20">
-              {resume?.length && resume.map((job, index) => <Card key={index} job={job} />)}
+              {resume?.length &&
+                resume.map((job, index) => <Card key={index} job={job} />)}
             </div>
           </div>
         </div>

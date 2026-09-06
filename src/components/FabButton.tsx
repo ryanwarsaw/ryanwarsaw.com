@@ -1,5 +1,3 @@
-import React from "react";
-
 const FabButton = () => {
   //Toggles theme state and sets the active theme
   const toggleTheme = () => {
@@ -17,6 +15,7 @@ const FabButton = () => {
 
   return (
     <button
+      type="button"
       onClick={toggleTheme}
       aria-label="Toggle Color Scheme"
       className="absolute top-9 right-9 bg-indigo-400 dark:bg-indigo-700 h-16 w-16 rounded-full flex items-center justify-center"

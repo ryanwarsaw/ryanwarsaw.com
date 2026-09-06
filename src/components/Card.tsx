@@ -1,10 +1,9 @@
-import React, { ReactNode } from "react";
 import Image from "next/image";
-import { Job } from "../misc/types";
+import type { Job } from "../misc/types";
 
 type Props = { job: Job };
 
-const Card = ({ job }: Props): JSX.Element => (
+const Card = ({ job }: Props) => (
   <div className="bg-white max-w-4xl dark:bg-slate-800 overflow-hidden rounded-md shadow-md p-4 mt-6">
     <div className="flex justify-between">
       <div>
@@ -17,7 +16,6 @@ const Card = ({ job }: Props): JSX.Element => (
         <Image
           alt={`${job.company} logo`}
           src={job.logo}
-          layout="raw"
           height={48}
           width={48}
           unoptimized={true}
@@ -31,7 +29,10 @@ const Card = ({ job }: Props): JSX.Element => (
 
     <div className="pt-1 truncate">
       {job.tags?.map((tag, index) => (
-        <span key={index} className="inline-block bg-indigo-600 dark:bg-indigo-700 rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 mb-2">
+        <span
+          key={index}
+          className="inline-block bg-indigo-600 dark:bg-indigo-700 rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 mb-2"
+        >
           {tag}
         </span>
       ))}
